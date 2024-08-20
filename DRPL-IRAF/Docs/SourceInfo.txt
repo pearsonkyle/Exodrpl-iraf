@@ -1,0 +1,75 @@
+ Exoplanet Data Reduction Pipeline v2.1
+ 
+ Created by Kyle Pearson
+
+ For a visual guide on how to run and use ExoDRPL visit: 
+ 	https://sites.google.com/a/email.arizona.edu/kyle-pearson/exodrpl
+ 
+ Most of the code is documented, if you want to find a specific function look in the header files first. 
+ 
+REQUIREMENTS:
+ the following software is not distributed with ExoDRPL 
+    * GCC/G++ Compiler    
+        http://gcc.gnu.org/install/
+ 
+    * xgterm
+    	http://invisible-island.net/xterm/
+        xgterm installation: (Intel MAC installation)
+            cd ~/Downloads/
+            wget http://iraf.noao.edu/x11iraf/x11iraf-v2.0BETA-bin.macintel.tar.gz
+            sudo mkdir /iraf/X11-iraf
+            cd /iraf/X11-iraf/
+            sudo tar -zxvf ~/Downloads/x11iraf-v2.0BETA-bin.macintel.tar.gz
+            cd /usr/local/bin/
+            sudo ln -sf /iraf/X11-iraf/bin.macintel/xgterm
+ 
+    * DS9
+    	http://hea-www.harvard.edu/RD/ds9/site/Download.html
+        DS9 installation: (Intel MAC installation)
+            cd ~/Downloads/
+            wget http://hea-www.harvard.edu/saord/download/ds9/darwinlion/ds9.darwinlion.7.0.2.tar.gz
+            (if you have a release other than Lion, pick up the appropriate file from http://hea-www.harvard.edu/RD/ds9/site/Download.html)
+            sudo mkdir /iraf/ds9
+            cd /iraf/ds9/
+            sudo tar -zxvf ~/Downloads/ds9.darwinlion.7.0.2.tar.gz
+            cd /usr/local/bin/
+            sudo ln -sf /iraf/ds9/ds9
+            sudo ln -sf /iraf/ds9/ds9.zip
+ 
+    * Iraf
+    	http://iraf.noao.edu/
+        Iraf installation: (Intel MAC installation)
+            cd ~/Downloads/
+            wget ftp://iraf.noao.edu/iraf/v216/PCIX/iraf.macx.x86_64.tar.gz
+            sudo mkdir -p /iraf/iraf/
+            cd /iraf/iraf/
+            sudo tar -zxvf ~/Downloads/iraf.macx.x86_64.tar.gz
+            export iraf="/iraf/iraf/"
+            sudo /iraf/iraf/unix/hlib/install
+   
+    * Iraf external Packages:
+        (The configure step must be executed only the first time external packages are installed.)
+            cd /iraf/iraf/extern/
+            sudo ./configure
+            sudo make check
+            sudo make fitsutil mscred mscdb stecf tables stsdas ...
+            (Choose all the packages you need, just skip "patch".)
+
+    ** First time after Iraf installation: 
+        cd ~/
+        mkdir iraf ; cd iraf
+        mkiraf (select xgterm as terminal type)
+        xgterm &
+        Then, in the new xgterm terminal window:
+        cd ~/iraf/
+        ds9 &
+        ecl or cl
+ 
+ 
+ MANUAL COMPILE + RUN:
+	g++ ExoDRPL/ExoDRPL.cc -o EXODRPL.exe
+	./EXODRPL.exe
+
+    You will need to be logged into IRAF to be able to execute the reduction scripts properly 
+    Also you may need to append '!' to front of these commands when running in IRAF
+ 

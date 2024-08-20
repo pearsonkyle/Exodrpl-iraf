@@ -1,0 +1,6 @@
+# compile and run the program
+g++ ExoDRPL/ExoDRPL.cc -fopenmp -o ExoFunction
+./ExoFunction
+
+
+
