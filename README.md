@@ -2,6 +2,9 @@
 
 This program creates a series of IRAF scripts for an arbitrary planet that will calibrate your images then perform aperture photometry. This automated pipeline is designed to run in two stages, preliminary and main. The preliminary run is designed to do a quick reduction and analysis of your images in order for you to find out how many ingress and egress data points you have so you can get optimal results in the analysis and main run. This pipeline runs through a user specified amount of apertures and tests every combination of reference stars at each aperture to find the combination that yields the minimum scatter (STDEV) in the out of transit baseline.
 
+If you're looking for an updated version of this pipeline, please visit the python package [EXOTIC](github.com/rzellem/EXOTIC).
+
+
 ## How to Install
 
 Untar the package in your data directory like such:
@@ -49,5 +52,3 @@ This program uses the reduction methods in [Tamineh et al. (2013)](http://adsabs
 ## Youtube tutorial
 
 https://www.youtube.com/watch?v=IenOiCSt90Q
-
-If you're looking for an updated version of this pipeline, please visit the python package [EXOTIC](github.com/rzellem/EXOTIC).
