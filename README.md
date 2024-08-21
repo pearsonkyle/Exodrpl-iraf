@@ -36,7 +36,7 @@ For installation information, please open `SourceInfo.txt`.
 
 ## Data Reduction
 
-This program uses the reduction methods in [Tamineh et al. (2013)](http://adsabs.harvard.edu/abs/2013MNRAS.428..678T) and [Tamineh et al. (2013)](http://adsabs.harvard.edu/abs/2013MNRAS.431.1669T). For exact instructions, please visit <https://sites.google.com/a/email.arizona.edu/ua-extrasolar-planet-project/data-reduction>.
+This program uses the reduction methods in [Turner et al. (2013)](http://adsabs.harvard.edu/abs/2013MNRAS.428..678T) and [Teske, Turner, et al. (2013)](http://adsabs.harvard.edu/abs/2013MNRAS.431.1669T). 
 
 ## How to Use
 
